@@ -36,7 +36,7 @@ export function Contact() {
       <div className="relative z-10 mx-auto grid max-w-[1600px] gap-16 px-6 py-24 md:px-10 md:py-32 lg:grid-cols-12 lg:gap-10 lg:px-14 lg:py-40">
         <div className="lg:col-span-5">
           <Reveal>
-            <p className="mb-6 font-sans text-[0.75rem] uppercase tracking-[0.35em] text-white/80 font-semibold">
+            <p className="mt-22 mb-6 font-sans text-[0.75rem] uppercase tracking-[0.35em] text-white/80 font-semibold">
               Get in Touch
             </p>
           </Reveal>
@@ -51,30 +51,6 @@ export function Contact() {
               clarity, and the craftsmanship your occasion deserves.
             </p>
           </Reveal>
-
-          <div className="mt-14 space-y-8">
-            <Reveal delay={0.25}>
-              <p className="font-sans text-[0.7rem] uppercase tracking-[0.3em] text-white/70 font-semibold">
-                Inquire
-              </p>
-              <div className="space-y-4 mt-2">
-                <a
-                  href="mailto:info@renaissanceevents.com"
-                  className="block font-display text-lg sm:text-xl md:text-[1.35rem] lg:text-3xl text-white transition-opacity hover:opacity-75 break-words"
-                  data-cursor="hover"
-                >
-                  info@renaissanceevents.com
-                </a>
-                <a
-                  href="mailto:info@specialeventschannel.com"
-                  className="block font-display text-lg sm:text-xl md:text-[1.35rem] lg:text-3xl text-white transition-opacity hover:opacity-75 break-words"
-                  data-cursor="hover"
-                >
-                  info@specialeventschannel.com
-                </a>
-              </div>
-            </Reveal>
-          </div>
         </div>
 
         <div className="lg:col-span-6 lg:col-start-7">
