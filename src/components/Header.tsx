@@ -1,21 +1,41 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, X, ArrowUpRight, ChevronDown } from "lucide-react";
 
-const navItems = [
+type SubService = {
+    name: string;
+    href: string;
+};
+
+type SimpleNavItem =
+    | { name: "HOME"; href: "/" }
+    | { name: "ABOUT"; href: "/about" }
+    | { name: "PORTFOLIO"; href: "/portfolio" }
+    | { name: "CONTACT"; href: "/contact" };
+
+type ServiceNavItem = {
+    name: "SERVICES";
+    href: "/services";
+    subServices: SubService[];
+};
+
+type NavItem = SimpleNavItem | ServiceNavItem;
+
+const navItems: NavItem[] = [
     { name: "HOME", href: "/" },
     { name: "ABOUT", href: "/about" },
-    { 
-        name: "SERVICES", 
+    {
+        name: "SERVICES",
         href: "/services",
         subServices: [
             { name: "Corporate Events", href: "/" },
             { name: "Special Celebrations", href: "/" },
             { name: "Meeting Management", href: "/" },
             { name: "Destination Events", href: "/" },
-        ]
+        ],
     },
     { name: "PORTFOLIO", href: "/portfolio" },
     { name: "CONTACT", href: "/contact" },
@@ -39,10 +59,14 @@ const Header = () => {
                     href="/"
                     onClick={closeMenu}
                     className="flex shrink-0 items-center focus:outline-none"
+                    aria-label="Renaissance Meetings & Special Events home"
                 >
-                    <img
+                    <Image
                         src="/images/logo-white.png"
                         alt="Renaissance Meetings & Special Events"
+                        width={220}
+                        height={90}
+                        priority
                         className="h-auto w-[170px] object-contain sm:w-[190px] lg:w-[210px] xl:w-[220px]"
                     />
                 </Link>
@@ -135,7 +159,7 @@ const Header = () => {
                                     )}
 
                                     {/* Sub-services Container with smooth blur-to-visible animation */}
-                                    {isServices && (
+                                    {isServices && 'subServices' in item && (
                                         <div
                                             className={`transition-all duration-500 ease-in-out overflow-hidden ${
                                                 servicesOpen
