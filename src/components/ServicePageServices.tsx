@@ -29,24 +29,9 @@ const services: Service[] = [
       'Global Event Coordination',
       'Large-Scale Event Logistics',
     ],
-    image: '/images/2.jpeg',
+    image: '/images/11.png',
     imageAlt: 'Large conference hall setup',
     icon: Users,
-  },
-  {
-    number: '02',
-    title: 'Music Festivals & Concerts',
-    description:
-      'From intimate performances to major concert experiences, we manage the details behind the scenes to create seamless and unforgettable live events.',
-    features: [
-      'Music Festivals',
-      'Concert Productions',
-      'Artist & Talent Coordination',
-      'Production Management',
-    ],
-    image: '/images/9.jpeg',
-    imageAlt: 'Live concert and music event',
-    icon: Music,
   },
   {
     number: '03',

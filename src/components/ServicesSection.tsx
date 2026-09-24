@@ -21,7 +21,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
   imageAlt = 'Large conference hall setup with rows of tables and chairs',
 }) => {
   return (
-    <section className="w-full bg-white py-12 sm:py-14 lg:py-[57px]">
+    <section className="w-full bg-white py-12 sm:py-14 lg:py-[180px]">
 
       <div className="mx-auto w-full max-w-[1480px]">
 
